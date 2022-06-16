@@ -3,7 +3,7 @@ import { getStationInformation } from '../api'
 import SearchBar from './SearchBar'
 import Error from './Error'
 
-export default function StationList(props) {
+function StationList(props) {
     const { data, status} = useQuery('station-info', getStationInformation)
 
     const onSearchSelect = (selectedItem) => {
@@ -25,3 +25,5 @@ export default function StationList(props) {
         <SearchBar items={ data.stations } onClickCallback={ onSearchSelect } />
     )
 }
+
+export default StationList

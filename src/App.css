@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.15rem;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 2.15rem);
 }
 
 input {
@@ -67,12 +67,13 @@ input {
 
 .Card h3 {
     margin: 0;
+    font-size: clamp(1rem, 4.4vw, 1.1rem);
     font-weight: normal;
     text-transform: uppercase;
 }
 
 .Card span {
-    font-size: 2em;
+    font-size: clamp(1rem, 4.4vw, 2rem);
     font-weight: bold;
 }
 
@@ -130,4 +131,14 @@ main {
 .ListContainer {
     flex: 1;
     margin-right: 2rem;
+}
+
+@media screen and (max-width: 760px) {
+    main {
+        flex-direction: column;
+    }
+
+    .StationDetails {
+        flex-direction: column;
+    }
 }
